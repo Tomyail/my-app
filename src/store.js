@@ -12,6 +12,7 @@ export function getAppStore () {
 
   const reducers = combineReducers({
     scenes: keaScenesReducer,
+    kea: keaReducer('kea'),
   });
 
   const sagaMiddleware = createSagaMiddleware();
@@ -25,3 +26,5 @@ export function getAppStore () {
 
   return store;
 }
+
+export default getAppStore();
