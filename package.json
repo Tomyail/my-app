@@ -5,12 +5,14 @@
   "dependencies": {
     "kea": "^0.27.3",
     "kea-saga": "^0.3.2",
+    "kea-thunk": "^0.3.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
     "react-scripts": "1.0.14",
     "redux": "^3.7.2",
     "redux-saga": "^0.16.0",
+    "redux-thunk": "^2.2.0",
     "reselect": "^3.0.1"
   },
   "scripts": {

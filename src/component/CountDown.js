@@ -16,6 +16,11 @@ const countdownLogic = kea({
     setCounter: (counter) => ({counter}),
   }),
 
+  thunks: ({actions, get, fetch, dispatch, getState}) => ({
+    anotherThunk: async () => {
+      console.log('start thunk');
+    },
+  }),
   start: function () {
     console.log('start saga');
   },
@@ -51,7 +56,7 @@ const countdownLogic = kea({
 
 const Countdown = ({
                      counter, finished,
-                     actions: {start},
+                     actions: {start, anotherThunk},
                    }) => {
   return <div className='kea-counter'>
     Count: {counter}
@@ -60,7 +65,11 @@ const Countdown = ({
       ? 'We made it until the end! finish() action triggered'
       : 'Click start to trigger the finish() action in a few seconds'}
     <br/><br/>
-    <button onClick={() => start()}>Start</button>
+    <button onClick={() => {
+      // anotherThunk(); //not work
+      start();
+    }}>Start
+    </button>
   </div>;
 };
 
