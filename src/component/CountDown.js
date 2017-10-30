@@ -66,7 +66,7 @@ const Countdown = ({
       : 'Click start to trigger the finish() action in a few seconds'}
     <br/><br/>
     <button onClick={() => {
-      // anotherThunk(); //not work
+      console.log('anotherThunk',anotherThunk);
       start();
     }}>Start
     </button>
